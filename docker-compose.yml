@@ -1,0 +1,11 @@
+version : '3'
+
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ./docker/ubuntu/Dockerfile
+    volumes:
+      - ./:/home/c-algorithm
+    container_name: c-algorithm-ubuntu
+    tty: true
