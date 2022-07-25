@@ -28,3 +28,11 @@ hello :
 		./hello; \
 		rm ./hello;\
 	'
+
+euclidean :
+	docker-compose exec ubuntu /bin/bash -c ' \
+		cd src; \
+		gcc EuclideanAlgorithm.c -o EuclideanAlgorithm; \
+		./EuclideanAlgorithm; \
+		rm ./EuclideanAlgorithm;\
+	'
