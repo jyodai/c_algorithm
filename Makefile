@@ -54,3 +54,19 @@ euclidean-t :
 	docker-compose exec ubuntu /bin/bash -c ' \
 		./src/EuclideanAlgorithm -t; \
 	'
+
+eratosthenes-c :
+	docker-compose exec ubuntu /bin/bash -c ' \
+		cd src; \
+		gcc SieveOfEratosthenes.c -o SieveOfEratosthenes; \
+	'
+
+eratosthenes-r :
+	docker-compose exec ubuntu /bin/bash -c ' \
+		./src/SieveOfEratosthenes; \
+	'
+
+eratosthenes-t :
+	docker-compose exec ubuntu /bin/bash -c ' \
+		./src/SieveOfEratosthenes -t; \
+	'
